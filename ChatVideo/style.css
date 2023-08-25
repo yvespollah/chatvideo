@@ -1,0 +1,95 @@
+#videos{
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100vh; 
+    overflow:hidden;
+    
+}
+*{
+    margin: 0px;
+}
+
+body{
+    background-color: #d2f2e2;
+}
+
+.video-player{
+    background-color: black;
+    width: 1000px;
+    height: 700px;
+    border: 3px solid #85c98b;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+   
+}
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-color: #b0e57c;
+}
+
+#user2{
+    display: none;
+}
+
+.smallFrame{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    margin-left: 300px;
+    height: 180px;
+    width: 300px;
+    border-radius: 10px;
+    border:2px solid #36e61b;
+    -webkit-box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.77);
+    box-shadow: 3px 3px 15px -1px rgba(0,0,0,0.77);
+    z-index: 999;
+}
+
+
+#controls{
+    position: fixed;
+    bottom: 60px;
+    left: 50%;
+    transform:translateX(-50%);
+    display: flex;
+    gap: 1em;
+}
+
+
+.control-container{
+  background-color: rgba(71, 227, 23, 0.9);
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.control-container img{
+    height: 30px;
+    width: 30px;
+}
+
+#leave-btn{
+    background-color: rgb(255,80,80, 1);
+}
+
+@media screen and (max-width:600px) {
+    .smallFrame{
+       margin-left:10px;
+       height: 80px;
+            width: 120px;
+    }
+
+    .control-container img{
+        height: 20px;
+        width: 20px;
+        
+    }
+
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Chat Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #d2f2e2;
+        }
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #b0e57c;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .login-heading {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1a5b30;
+        }
+        .form-control {
+            border-color: #85c98b;
+        }
+        .btn-login {
+            background-color: #1a5b30;
+            border-color: #1a5b30;
+            color: #fff;
+        }
+        .btn-login:hover {
+            background-color: #12341d;
+            border-color: #12341d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="login-container">
+            <h2 class="login-heading">Connecte Toi On chat Ensemble</h2>
+            <form id="join-form">
+                <div class="form-group">
+                    <label for="room">Code</label>
+                    <input type="text" name="invite_link" placeholder="Entrer le code">
+                </div>
+                <button type="submit" class="btn btn-login btn-block">Connecter</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // on recupere le formulaire et on utilise sa pour cree le lien du chat
+ let form = document.getElementById('join-form')
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    let inviteCode = e.target.invite_link.value
+    window.location = `index.html?room=${inviteCode}` 
+})
+ 
+    </script>
+</body>
+</html>
